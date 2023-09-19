@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark_blue: hsl(249, 10%, 26%);
+  --grayish_blue: hsl(246, 25%, 77%);
+}
+body {
+    background: var(--red);
+    background-image: url('./images/bg-intro-desktop.png');
+    padding: 5rem;
+
+  /* background: linear-gradient(hsl(0, 100%, 74%)),
+    url("./images/bg-intro-desktop.png") cover no-repeat; */
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.left{
+  width: 50%;
+  padding: 0 2rem 0 2rem;
+  margin: 0 auto 0 auto;
+
+}
+.left > h1{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+.left > p{
+  color: #fff;
+  font-size: 16px;
+  width: 90%;
+  margin-left: 0;
+  line-height: 1.5rem;
+  letter-spacing: 0.2px;
+}
+.right{
+  width: 50%;
+  margin: 0 auto;
+}
+.right_link{
+  background: var(--blue);
+  width: 80%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+  color: var(--grayish_blue);
+  cursor: pointer;
+}
+.right_link > span{
+  color: #fff;
+  font-weight: 600;
+}
+.right > form{
+  width: 80%;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0.3rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+.right > form > input{
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--grayish_blue);
+  transition: all .8s ease-in;
+}
+.right > form > input:hover{
+  border: 2px solid var(--red);
+}
+.right > form > input[type = 'submit']{
+  background: var(--green);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: white;
+  cursor: pointer;
+  margin-bottom: .7rem;
+}
+.right > form > input[type = 'submit']:hover{
+  border: none;
+  opacity: 0.5;
+  box-shadow: 0 0.3rem hsl(154, 61%, 35%);
+}
+.error_icon, .error_icon2, .error_icon3, .error_icon4{
+  position: absolute;
+  right: 2.5rem;
+  margin-top: -2.3rem;
+  display: none;
+  transition: all 2s ease-in-out;
+}
+.terms{
+  font-size: 10px;
+  color: var(--grayish_blue);
+  text-align: center;
+  font-weight: 600;
+}
+.services{
+  color: var(--red);
+}
+.first_name_err,.last_name_err,.email_err,.password_err{
+  padding-top: 0.5rem;
+  font-size: 10px;
+  float: right;
+  color: var(--red);
+  font-weight: 600;
+  transition: all 4s;
+}
+@media (max-width: 950px){
+  body{
+    padding: 4rem;
+  }
+  .left{
+    padding: 0;
+  }
+}
+@media (max-width: 800px){
+  body{
+    padding: 3rem;
+  }
+  .left{
+    padding: 0;
+  }
+  .left > h1{
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+  }
+  .right_link{
+    width: 100%;
+  }
+  .right > form{
+    width: 100%;
+  }
+}
+@media (max-width: 600px){
+  body{
+    padding: 1rem;
+  }
+  .left{
+    padding: 0;
+  }
+  .left > h1{
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .right_link{
+    width: 100%;
+  }
+  .right > form{
+    width: 100%;
+  }
+  .right > form > input[type = 'submit']{
+    letter-spacing:  0;
+  }
+}
+@media (max-width: 480px){
+  body{
+    background-image: url('./images/bg-intro-mobile.png');
+    padding: 2rem;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .left, .right{
+    width: 100%;
+  }
+  .left{
+    margin: 15% 0;
+    padding: 0;
+  }
+  .left > h1{
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .left > p{
+    width: 100%;
+    text-align: center;
+  }
+  .right_link{
+    width: 100%;
+  }
+  .right > form{
+    width: 100%;
+  }
+  .right > form > input[type = 'submit']{
+    letter-spacing:  0.2rem;
+  }
+}
